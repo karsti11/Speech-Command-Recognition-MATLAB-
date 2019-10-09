@@ -1,3 +1,6 @@
+# Code from Coursera Machine learning course by Stanford
+# https://www.coursera.org/learn/machine-learning
+
 function [J, grad] = lrCostFunction(theta, X, y, lambda)
 %LRCOSTFUNCTION Compute cost and gradient for logistic regression with 
 %regularization
