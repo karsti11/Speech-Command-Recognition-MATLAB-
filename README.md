@@ -37,5 +37,8 @@ Gradient Descent
 Method used for classification is Logistic Regression - OnevsAll (***lrCostFunction.m***), where feature vector for each sample is multiplied by optimized weights of 3 possible classes in this case. As a result, 3x1 column vector is received, where the largest element shows the predicted class. Weight optimization is done using conjugate gradient descent (***fmincg.m*** and ***oneVsAll***). 
 Prediction is then gained through function ***predictOneVsAll.m***.
 
+Prediction accuracy tested for individual features can be seen on the following picture.
+
+<p align="center"><img src="images/acc_graph.png" /></p>
  
 Function used for testing prediction by recording speech segment of 1 second duration: ***detect_command.m***
