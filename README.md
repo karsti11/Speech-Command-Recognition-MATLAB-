@@ -7,6 +7,8 @@ Speech commands recognition in this case was made with help of using and modifyi
   1. Coursera Machine learning course by Stanford (Andrew Ng) - **coursera_code**
   2. Theodoros Giannakopolous, Aggelos Pikrakis, "Introduction to audio analysis: A MATLAB approach", First edition 2014 - **audio_analysis_book_code**
   
+Data acquired from Tensorflow: http://download.tensorflow.org/data/speech_commands_v0.01.tar.gz
+  
   ## Loading data and feature extraction
   
  Speech signal vectors were loaded in *MATLAB* using the ***LoadAudioData.m*** function, which creates a user interface for picking speech files to be read and arranged in a matrix of data.
