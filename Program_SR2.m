@@ -55,7 +55,7 @@ fprintf('\nTraining data set prediction accuracy: %f \n' ,prediction_train);
 
 
 
-%% Plot features of 3 examples
+% Plot features of 3 examples
 % Plotting random examples 
 rp = randperm(m_train);
 for i = 1:3
@@ -85,7 +85,7 @@ end
 
 
 
-%% Validation set
+% Validation set
 % Loading validation data
 load('yes_validate.mat');
 load('no_validate.mat');
