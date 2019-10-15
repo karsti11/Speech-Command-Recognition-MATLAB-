@@ -4,8 +4,8 @@
 Three word classification between "Yes", "No" and "Marvin in MATLAB
 
 Speech commands recognition in this case was made with help of using and modifying following code sources:
-  1. Coursera Machine learning course by Stanford (Andrew Ng) - coursera_code
-  2. Theodoros Giannakopolous, Aggelos Pikrakis, "Introduction to audio analysis: A MATLAB approach", First edition 2014 - audio_analysis_book_code
+  1. Coursera Machine learning course by Stanford (Andrew Ng) - **coursera_code**
+  2. Theodoros Giannakopolous, Aggelos Pikrakis, "Introduction to audio analysis: A MATLAB approach", First edition 2014 - **audio_analysis_book_code**
   
  Speech signal vectors were loaded in *MATLAB* using the ***LoadAudioData.m*** function, which creates a user interface for picking speech files to be read and arranged in a matrix of data.
 Labels vector contains labels (1,2,3) for each of the loaded individual speech signals.
