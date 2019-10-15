@@ -11,7 +11,7 @@ L = length(signal);
 
 numOfFrames = floor((L-windowLength)/step) + 1;
 
-numOfFeatures = 3;
+numOfFeatures = 10;
 Features = zeros(numOfFeatures, numOfFrames);
 Ham = window(@hamming, windowLength);
 
@@ -21,22 +21,22 @@ for i = 1:numOfFrames
     frame = frame .* Ham;
     frameFFT = getDFT(frame, fs);
     if (sum(abs(frame))>eps)
-        %Features(1,i) = feature_zcr(frame);
-        %Features(1,i) = feature_energy(frame);
-        %Features(1,i) = feature_energy_entropy(frame, 10);
-%         
+        Features(1,i) = feature_zcr(frame);
+        Features(2,i) = feature_energy(frame);
+        Features(3,i) = feature_energy_entropy(frame, 10);
+        
          if (i==1) frameFFTPrev = frameFFT; end
          [Centr, Spread] = ...
              feature_spectral_centroid(frameFFT, fs);
-         Features(1,i) = Centr;
-         Features(2,i) = Spread;
-         Features(3,i) = feature_spectral_entropy(frameFFT, 10);
-         %Features(1,i) = feature_spectral_flux(frameFFT, frameFFTPrev);
-         %Features(2,i) = feature_spectral_rolloff(frameFFT, 0.90);
-%        
-         %[HR, F0] = feature_harmonic(frame, fs);
-         %Features(3,i) = HR;
-         %Features(1,i) = F0;
+         Features(4,i) = Centr;
+         Features(5,i) = Spread;
+         Features(6,i) = feature_spectral_entropy(frameFFT, 10);
+         Features(7,i) = feature_spectral_flux(frameFFT, frameFFTPrev);
+         Features(8,i) = feature_spectral_rolloff(frameFFT, 0.90);
+        
+         [HR, F0] = feature_harmonic(frame, fs);
+         Features(9,i) = HR;
+         Features(10,i) = F0;
         %Features(8,i) = Features(3,i) / Features(1,i);
         %Features(9,i) = Features(3,i) / Features(2,i);
         %Features(10,i) = Features(4,i) / Features(1,i);
@@ -47,7 +47,6 @@ for i = 1:numOfFrames
     curPos = curPos + step;
     frameFFTPrev = frameFFT;
 end
-%Features(35, :) = medifilt1(Features(35, :),3);
 
 
         
