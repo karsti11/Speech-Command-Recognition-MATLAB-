@@ -13,7 +13,7 @@ Each speech signal is divided in short time frames (which might or might not ove
 
 <p align="center"><img src="images/hanning.png" /></p>
 
-Feature extracting is done with ***TestingFeature.m*** function. Signal, sampling frequency, size of the (window) moving frame and step size of the moving frame are input data. It returns a matrix *M x N*, where *M* is the number of features, and *N* is the total number of short-term windows.
+Feature extracting is done with ***TestingFeatures.m*** function. Signal, sampling frequency, size of the (window) moving frame and step size of the moving frame are input data. It returns a matrix *M x N*, where *M* is the number of features, and *N* is the total number of short-term windows.
 
 Features used:
   - Zero Crossing Rate
