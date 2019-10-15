@@ -16,7 +16,9 @@ Each speech signal is divided in short time frames (which might or might not ove
 Feature extracting is done with TestingFeature.m function. Signal, sampling frequency, size of the (window) moving frame and step size of the moving frame are input data. It returns a matrix M x N, where M is the number of features, and N is the total number of short-term windows.
 Features matrix is arranged in a way so that signals are represented with feature vectors, thus significantly reducing the amount of data. Cost function and gradient descent for logistic regression are then computed using the feature matrix as input data (x).
 
+Cost function:
 <p align="center"><img src="images/cost.png" /></p>
+Gradient Descent
 <p align="center"><img src="images/gradient.png" /></p>
 
 Method used for classification is Logistic Regression - OnevsAll, where feature vector for each sample is multiplied by optimized weights of 3 possible classes in this case. As a result, 3x1 column vector is received, where the largest element shows the predicted class. Weight optimization is done using conjugate gradient descent (fmincg.m). 
